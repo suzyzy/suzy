@@ -1,0 +1,42 @@
+---
+title: "fianl2"
+author: "SUZY"
+date: "December 2, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(dplyr)
+library(RSQLite)
+library(MPV)
+library(CombMSC)
+library(leaps)
+library(MASS)
+library(stats4)
+library(ggplot2)
+```
+```{r}
+h2015 <- read.csv("2015.csv")
+head(h2015)
+h2015=h2015[,-12]
+h2015=h2015[,-1]
+h2015=h2015[,-1]
+h2015=h2015[,-1]
+h2015=h2015[,-2]
+
+names(h2015)=c("hscore","economy","family","health","freedom","government","generosity")
+names(h2015)
+ncol(h2015)
+nrow(h2015)
+tail(h2015)
+#h2015$generosity=round(log2((h2015$generosity+2))*1/(h2015$generosity+1),4)
+
+tail(h2015)
+```
